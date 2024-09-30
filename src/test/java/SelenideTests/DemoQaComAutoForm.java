@@ -1,4 +1,4 @@
-package SelenideTests.Lesson7and15;
+package SelenideTests;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;

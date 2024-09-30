@@ -1,4 +1,4 @@
-package SelenideTests.Lesson7and15;
+package SelenideTests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
