@@ -24,7 +24,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		// 1 Шаг: зайти на сайт https://demoqa.com/automation-practice-form
 		step("1 Шаг: зайти на сайт https://demoqa.com/automation-practice-form", () ->
 		{
-			open(website);
+			open(website+"automation-practice-form");
 		});
 
 
@@ -186,7 +186,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		// 1 Шаг: зайти на сайт https://demoqa.com/automation-practice-form
 		step("1 Шаг: зайти на сайт https://demoqa.com/automation-practice-form", () ->
 		{
-			open(website);
+			open(website+"automation-practice-form");
 		});
 
 
@@ -344,7 +344,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 	public void DemoQaComAutoFormWithNoDetailReportSuccesfullTest() {
 
 		// 1 Шаг: зайти на сайт https://demoqa.com/automation-practice-form
-		open(website);
+		open(website+"automation-practice-form");
 
 		// 2 Шаг: Заполнить форму
 		$x(".//*[@id='firstName']").setValue("Mark");
@@ -448,7 +448,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 	public void DemoQaComAutoFormWithNoDetailReportUnsuccesfullTest() {
 
 		// 1 Шаг: зайти на сайт https://demoqa.com/automation-practice-form
-		open(website);
+		open(website+"automation-practice-form");
 
 		// 2 Шаг: Заполнить форму
 		$x(".//*[@id='firstName']").setValue("Petrov");
