@@ -31,12 +31,12 @@ repositories {
 
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
     testImplementation("com.codeborne:selenide:7.5.1")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0") //для Аллюр- отчётов
     testImplementation("io.qameta.allure:allure-selenide:2.19.0") //для Аллюр- отчётов
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0") //для Аллюр- отчётов
-}
+    }
 
 tasks.test {
     useJUnitPlatform()
