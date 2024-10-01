@@ -17,8 +17,6 @@ public class DemoQaComAutoFormTestBase {
 	public static final String adress1 = "Russia, Moscow 1";
 
 
-
-
 	@BeforeEach
 	public void TestBase() {
 		Configuration.pageLoadStrategy = "eager";
