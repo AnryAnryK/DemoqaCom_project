@@ -31,17 +31,17 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		// 2 Шаг: Заполнить форму
 		step("2 Шаг: Заполнить форму - Имя", () ->
 		{
-			$x(".//*[@id='firstName']").setValue("Mark");
+			$x(".//*[@id='firstName']").setValue(name1);
 		});
 
 		step("2 Шаг: Заполнить форму - Фамилию", () ->
 		{
-			$x(".//*[@id='lastName']").setValue("Petrov");
+			$x(".//*[@id='lastName']").setValue(surname1);
 		});
 
 		step("2 Шаг: Заполнить форму - Электронную почту", () ->
 		{
-			$x(".//*[@id='userEmail']").setValue("MarkPetrov@mail.com");
+			$x(".//*[@id='userEmail']").setValue(email1);
 		});
 
 		step("2 Шаг: Заполнить форму - Пол", () ->
@@ -51,7 +51,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 
 		step("2 Шаг: Заполнить форму - Телефон", () ->
 		{
-			$x(".//*[@id='userNumber']").setValue("1234567891");
+			$x(".//*[@id='userNumber']").setValue(String.valueOf(phoneNumber1));
 		});
 
 		step("2 Шаг: Заполнить форму - Дату рождения", () ->
@@ -80,7 +80,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 
 		step("2 Шаг: Заполнить форму - Адрес", () ->
 		{
-			$x(".//*[@id='currentAddress']").setValue("Russia, Moscow 1");
+			$x(".//*[@id='currentAddress']").setValue(adress1);
 		});
 
 		step("2 Шаг: Заполнить форму - Штат", () ->
@@ -106,14 +106,14 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 			$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 					.$(byTagAndText("td", "Student Name"))
 					.sibling(0)
-					.shouldHave(text("Mark Petrov"));
+					.shouldHave(text(name1+" "+surname1));
 		});
 
 		step("3 Шаг: Проверить данные заполненной формы - Электронная почта - 'MarkPetrov@mail.com'", () -> {
 			$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 					.$(byTagAndText("td", "Student Email"))
 					.sibling(0)
-					.shouldHave(text("MarkPetrov@mail.com"));
+					.shouldHave(text(email1));
 		});
 
 		step("3 Шаг: Проверить данные заполненной формы - Пол - 'Male'", () -> {
@@ -127,7 +127,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 			$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 					.$(byTagAndText("td", "Mobile"))
 					.sibling(0)
-					.shouldHave(text("1234567891"));
+					.shouldHave(text(String.valueOf(phoneNumber1)));
 		});
 
 		step("3 Шаг: Проверить данные заполненной формы - Дата рождения - '01 January,1900'", () -> {
@@ -163,7 +163,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 			$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 					.$(byTagAndText("td", "Address"))
 					.sibling(0)
-					.shouldHave(text("Russia, Moscow 1"));
+					.shouldHave(text(adress1));
 		});
 
 		step("3 Шаг: Проверить данные заполненной формы - Штат и Город - 'Rajasthan Jaiselmer'", () -> {
@@ -195,17 +195,17 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		// 2 Шаг: Заполнить форму
 		step("2 Шаг: Заполнить форму - Имя", () ->
 		{
-			$x(".//*[@id='firstName']").setValue("Petrov");
+			$x(".//*[@id='firstName']").setValue(name1);
 		});
 
 		step("2 Шаг: Заполнить форму - Фамилию", () ->
 		{
-			$x(".//*[@id='lastName']").setValue("Mark");
+			$x(".//*[@id='lastName']").setValue(surname1);
 		});
 
 		step("2 Шаг: Заполнить форму - Электронную почту", () ->
 		{
-			$x(".//*[@id='userEmail']").setValue("MarkPetrov@mail.com");
+			$x(".//*[@id='userEmail']").setValue(email1);
 		});
 
 		step("2 Шаг: Заполнить форму - Пол", () ->
@@ -215,7 +215,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 
 		step("2 Шаг: Заполнить форму - Телефон", () ->
 		{
-			$x(".//*[@id='userNumber']").setValue("1234567891");
+			$x(".//*[@id='userNumber']").setValue(String.valueOf(phoneNumber1));
 		});
 
 		step("2 Шаг: Заполнить форму - Дату рождения", () ->
@@ -241,7 +241,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 
 		step("2 Шаг: Заполнить форму - Адрес", () ->
 		{
-			$x(".//*[@id='currentAddress']").setValue("Russia, Moscow 1");
+			$x(".//*[@id='currentAddress']").setValue(adress1);
 		});
 
 		step("2 Шаг: Заполнить форму - Штат", () ->
@@ -267,14 +267,14 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 			$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 					.$(byTagAndText("td", "Student Name"))
 					.sibling(0)
-					.shouldHave(text("Mark Petrov"));
+					.shouldHave(text(name1+" "+surname1));
 		});
 
 		step("3 Шаг: Проверить данные заполненной формы - Электронная почта - 'MarkPetrov@mail.com'", () -> {
 			$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 					.$(byTagAndText("td", "Student Email"))
 					.sibling(0)
-					.shouldHave(text("MarkPetrov@mail.com"));
+					.shouldHave(text(email1));
 		});
 
 		step("3 Шаг: Проверить данные заполненной формы - Пол - 'Male'", () -> {
@@ -288,7 +288,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 			$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 					.$(byTagAndText("td", "Mobile"))
 					.sibling(0)
-					.shouldHave(text("1234567891"));
+					.shouldHave(text(String.valueOf(phoneNumber1)));
 		});
 
 		step("3 Шаг: Проверить данные заполненной формы - Дата рождения - '01 January,1900'", () -> {
@@ -324,7 +324,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 			$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 					.$(byTagAndText("td", "Address"))
 					.sibling(0)
-					.shouldHave(text("Russia, Moscow 1"));
+					.shouldHave(text(adress1));
 		});
 
 		step("3 Шаг: Проверить данные заполненной формы - Штат и Город - 'Rajasthan Jaiselmer'", () -> {
@@ -350,15 +350,15 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		open(website + "automation-practice-form");
 
 		// 2 Шаг: Заполнить форму
-		$x(".//*[@id='firstName']").setValue("Mark");
+		$x(".//*[@id='firstName']").setValue(name1);
 
-		$x(".//*[@id='lastName']").setValue("Petrov");
+		$x(".//*[@id='lastName']").setValue(surname1);
 
-		$x(".//*[@id='userEmail']").setValue("MarkPetrov@mail.com");
+		$x(".//*[@id='userEmail']").setValue(email1);
 
 		$x(".//*[@class='practice-form-wrapper']").$(byText("Male")).click();
 
-		$x(".//*[@id='userNumber']").setValue("1234567891");
+		$x(".//*[@id='userNumber']").setValue(String.valueOf(phoneNumber1));
 
 		$x(".//*[@id='dateOfBirthInput']").click();
 
@@ -373,7 +373,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 
 		$x(".//*[@id='uploadPicture']").uploadFromClasspath("sampleFile1.jpeg");
 
-		$x(".//*[@id='currentAddress']").setValue("Russia, Moscow 1");
+		$x(".//*[@id='currentAddress']").setValue(adress1);
 
 		$x(".//*[@class=' css-1wa3eu0-placeholder']").click();
 		$x(".//*[@id='stateCity-wrapper']").$(byText("Rajasthan")).click();
@@ -390,12 +390,12 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Student Name"))
 				.sibling(0)
-				.shouldHave(text("Mark Petrov"));
+				.shouldHave(text(name1+" "+surname1));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Student Email"))
 				.sibling(0)
-				.shouldHave(text("MarkPetrov@mail.com"));
+				.shouldHave(text(email1));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Gender"))
@@ -405,7 +405,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Mobile"))
 				.sibling(0)
-				.shouldHave(text("1234567891"));
+				.shouldHave(text(String.valueOf(phoneNumber1)));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Date of Birth"))
@@ -431,7 +431,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Address"))
 				.sibling(0)
-				.shouldHave(text("Russia, Moscow 1"));
+				.shouldHave(text(adress1));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "State and City"))
@@ -444,7 +444,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 	}
 
 	@Test
-	@Description("Успешный Автотест на проверку заполнения формы https://demoqa.com/automation-practice-form без Детализированного Отчёта")
+	@Description("Неуспешный Автотест на проверку заполнения формы https://demoqa.com/automation-practice-form без Детализированного Отчёта")
 	@Owner("Калинченко Андрей Дмитриевич")
 
 	//	УСПЕШНО !!! (получен ожидаемый результат)
@@ -456,15 +456,15 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		open(website + "automation-practice-form");
 
 		// 2 Шаг: Заполнить форму
-		$x(".//*[@id='firstName']").setValue("Petrov");
+		$x(".//*[@id='firstName']").setValue(name1);
 
-		$x(".//*[@id='lastName']").setValue("Mark");
+		$x(".//*[@id='lastName']").setValue(surname1);
 
-		$x(".//*[@id='userEmail']").setValue("MarkPetrov@mail.com");
+		$x(".//*[@id='userEmail']").setValue(email1);
 
 		$x(".//*[@class='practice-form-wrapper']").$(byText("Male")).click();
 
-		$x(".//*[@id='userNumber']").setValue("1234567891");
+		$x(".//*[@id='userNumber']").setValue(String.valueOf(phoneNumber1));
 
 		$x(".//*[@id='dateOfBirthInput']").setValue("01.01.1990").pressEnter(); //намеренно убрал нажатие на локаторы "Дата"-"Месяц"-"Год" и поставил "ввести текст вручную" (т.к. ввод на сайте работает не корректно, то тест - падает при проверке)
 
@@ -475,7 +475,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 
 		$x(".//*[@id='uploadPicture']").uploadFromClasspath("sampleFile1.jpeg");
 
-		$x(".//*[@id='currentAddress']").setValue("Russia, Moscow 1");
+		$x(".//*[@id='currentAddress']").setValue(adress1);
 
 		$x(".//*[@class=' css-1wa3eu0-placeholder']").click();
 		$x(".//*[@id='stateCity-wrapper']").$(byText("Rajasthan")).click();
@@ -492,12 +492,12 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Student Name"))
 				.sibling(0)
-				.shouldHave(text("Mark Petrov"));
+				.shouldHave(text(name1+" "+surname1));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Student Email"))
 				.sibling(0)
-				.shouldHave(text("MarkPetrov@mail.com"));
+				.shouldHave(text(email1));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Gender"))
@@ -507,7 +507,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Mobile"))
 				.sibling(0)
-				.shouldHave(text("1234567891"));
+				.shouldHave(text(String.valueOf(phoneNumber1)));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Date of Birth"))
@@ -533,7 +533,7 @@ public class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Address"))
 				.sibling(0)
-				.shouldHave(text("Russia, Moscow 1"));
+				.shouldHave(text(adress1));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "State and City"))
