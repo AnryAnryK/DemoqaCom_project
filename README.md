@@ -1,4 +1,4 @@
-:four_leaf_clover: :hammer_and_wrench: :four_leaf_clover:
+:four_leaf_clover: :hammer_and_wrench: :gear: :four_leaf_clover:
 # Тестовый Проект  
 :link: ## https://demoqa.com/automation-practice-form
 
