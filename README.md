@@ -1,4 +1,4 @@
-:four_leaf_clover:
+:four_leaf_clover: :four_leaf_clover: :four_leaf_clover:
 # Тестовый Проект  
 ## https://demoqa.com/automation-practice-form
 
