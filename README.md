@@ -2,7 +2,7 @@
 # Тестовый Проект  
 :link: https://demoqa.com/automation-practice-form
 
-## Результаты в Аллюр-репорт (в каждом тесте получен ожидаемый результат)
+## Результаты в Аллюр-репорт (в каждом тесте получен ожидаемый результат)  :ok_hand:
 ![image](https://github.com/user-attachments/assets/c279c7fe-2f07-4fae-8d0a-16d75a660a5a)
 
 ![image](https://github.com/user-attachments/assets/6efb84e1-d6bf-46d1-9cc6-8e9cbf78a3cd)
