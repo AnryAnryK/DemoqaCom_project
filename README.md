@@ -1,5 +1,5 @@
 :four_leaf_clover: :hammer_and_wrench: :gear: :four_leaf_clover:
-# Тестовый Проект  
+# Тестовый Проект  :technologist:
 :link: https://demoqa.com/automation-practice-form
 
 ## Результаты в Аллюр-репорт (в каждом тесте получен ожидаемый результат)  :ok_hand:
