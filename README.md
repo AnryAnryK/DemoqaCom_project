@@ -1,4 +1,10 @@
 :four_leaf_clover: :hammer_and_wrench: :gear: :four_leaf_clover:
+flowchart TB
+  node1[Форма 1]  
+  node2(Форма 2)
+  node3([Форма 3])
+  node4[[Форма 4]]
+  node5[(Форма 5)]
 # Тестовый Проект  
 :link: https://demoqa.com/automation-practice-form
 
