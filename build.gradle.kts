@@ -31,11 +31,12 @@ repositories {
 
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.1") //JUnit5  - !!! это АГРЕГАТОР (он включает в себя 1-ю и 2-ю минимально необходимые зависимости, т.е. можно ТОЛЬКО ЕГО ИСПОЛЬЗОВАТЬ !!!)
     testImplementation("com.codeborne:selenide:7.5.1")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0") //для Аллюр- отчётов
     testImplementation("io.qameta.allure:allure-selenide:2.19.0") //для Аллюр- отчётов
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0") //для Аллюр- отчётов
+    testImplementation("io.rest-assured:rest-assured:5.5.0") //для тестирования Rest Api
     }
 
 tasks.test {
