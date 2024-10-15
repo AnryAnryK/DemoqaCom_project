@@ -26,7 +26,7 @@ public class ReqresInSingleUserTest {
 				.body("data.id", is(2))
 				.body("data.email", is("janet.weaver@reqres.in"))
 				.body("data.first_name", is("Janet"))
-				.body("data.last_name", is("Weave"));
+				.body("data.last_name", is("Weaver"));
 
 	}
 }
