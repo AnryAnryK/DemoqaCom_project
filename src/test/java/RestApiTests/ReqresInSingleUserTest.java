@@ -13,7 +13,7 @@ import static org.hamcrest.Matchers.is;
 
 
 public class ReqresInSingleUserTest {
-//	String data ="{id: 2,\n" +
+///	String data ="{id: 2,\n" +
 //			"email: \"janet.weaver@reqres.in\",\n" +
 //			"first_name: \"Janet\",\n" +
 //			"last_name: \"Weaver\"}";
