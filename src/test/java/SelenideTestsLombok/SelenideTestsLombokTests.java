@@ -1,32 +1,24 @@
-package SelenideTests;
+package SelenideTestsLombok;
 
 import SelenideTestsLombok.SelenideTestsLombokTestsTestBase;
-import com.codeborne.selenide.SetValueOptions;
+import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
+public class SelenideTestsLombokTests extends SelenideTestsLombokTestsTestBase {
 
 
-	private ArrayList name;
-	private List<String> surname;
 
 	@Test
 	@Description("Успешный Автотест на проверку заполнения формы https://demoqa.com/automation-practice-form с Детализированным Отчётом")
@@ -562,4 +554,5 @@ class DemoQaComAutoForm extends DemoQaComAutoFormTestBase {
 	}
 
 }
+
 
