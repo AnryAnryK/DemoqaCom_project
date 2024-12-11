@@ -1,23 +1,19 @@
-package SelenideTestsLombok;
+package SelenideTestsPageObject;
 
-import SelenideTestsLombok.SelenideTestsLombokTestsTestBase;
-import com.codeborne.selenide.Configuration;
+import SelenideTestsPageObject.Components.Meta;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class SelenideTestsLombokTests extends SelenideTestsLombokTestsTestBase {
+public class SelenideTestsPageObjectTests extends SelenideTestsPageObjectTestBase {
 
+	Meta meta = new Meta();  // это - с PageObject с данными в пакете "Meta"
 
 
 	@Test
@@ -355,12 +351,16 @@ public class SelenideTestsLombokTests extends SelenideTestsLombokTestsTestBase {
 	public void SelenideTestsLombokTestsWithNoDetailReportSuccesfullTest() {
 
 		// 1 Шаг: зайти на сайт https://demoqa.com/automation-practice-form
+
 		open(website + "automation-practice-form");
 
 		// 2 Шаг: Заполнить форму
-		$x(".//*[@id='firstName']").setValue(name1);
+		meta.setFirstNameInput("Mark"); // это - с PageObject с данными в пакете "Meta"
 
-		$x(".//*[@id='lastName']").setValue(surname1);
+//		$x(".//*[@id='firstName']").setValue(name1);
+
+		meta.setLastNameInput("Petrov"); // это - с PageObject с данными в пакете "Meta"
+//		$x(".//*[@id='lastName']").setValue(surname1);
 
 		$x(".//*[@id='userEmail']").setValue(email1);
 

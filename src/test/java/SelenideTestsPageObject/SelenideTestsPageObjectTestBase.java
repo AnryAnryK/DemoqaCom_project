@@ -1,4 +1,4 @@
-package SelenideTestsLombok;
+package SelenideTestsPageObject;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class SelenideTestsLombokTestsTestBase {
+public class SelenideTestsPageObjectTestBase {
 
 	public static final String website = "https://demoqa.com/";
 	public static final String name1 = "Mark";
