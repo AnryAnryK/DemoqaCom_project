@@ -93,7 +93,7 @@ public class SelenideTestsLombokTests extends SelenideTestsLombokTestsTestBase {
 
 		step("2 Шаг: Заполнить форму - Штат", () ->
 		{
-			$x(".//*[@class=' css-1wa3eu0-placeholder']").click();
+			$x(".//*[@class=' css-1wa3eu0-placeholder']").scrollTo().click();
 			$x(".//*[@id='stateCity-wrapper']").$(byText("Rajasthan")).click();
 		});
 
@@ -254,7 +254,7 @@ public class SelenideTestsLombokTests extends SelenideTestsLombokTestsTestBase {
 
 		step("2 Шаг: Заполнить форму - Штат", () ->
 		{
-			$x(".//*[@class=' css-1wa3eu0-placeholder']").click();
+			$x(".//*[@class=' css-1wa3eu0-placeholder']").scrollTo().click();
 			$x(".//*[@id='stateCity-wrapper']").$(byText("Rajasthan")).click();
 		});
 
@@ -383,7 +383,7 @@ public class SelenideTestsLombokTests extends SelenideTestsLombokTestsTestBase {
 
 		$x(".//*[@id='currentAddress']").setValue(adress1);
 
-		$x(".//*[@class=' css-1wa3eu0-placeholder']").click();
+		$x(".//*[@class=' css-1wa3eu0-placeholder']").scrollTo().click();
 		$x(".//*[@id='stateCity-wrapper']").$(byText("Rajasthan")).click();
 
 		$x(".//*[@class=' css-1wa3eu0-placeholder']").click();
@@ -485,7 +485,7 @@ public class SelenideTestsLombokTests extends SelenideTestsLombokTestsTestBase {
 
 		$x(".//*[@id='currentAddress']").setValue(adress1);
 
-		$x(".//*[@class=' css-1wa3eu0-placeholder']").click();
+		$x(".//*[@class=' css-1wa3eu0-placeholder']").scrollTo().click();
 		$x(".//*[@id='stateCity-wrapper']").$(byText("Rajasthan")).click();
 
 		$x(".//*[@class=' css-1wa3eu0-placeholder']").click();
