@@ -8,8 +8,13 @@ import static com.codeborne.selenide.Selenide.$x;
 public class Meta extends SelenideTestsPageObjectTestBase {
 
 
+	public static final String website = "https://demoqa.com/";
 	private SelenideElement firstNameInput = $x(".//*[@id='firstName']");
 	private SelenideElement lastNameInput = $x(".//*[@id='lastName']");
+	private SelenideElement userEmailInput = $x(".//*[@id='userEmail']");
+	private SelenideElement phoneNumber1Input = $x(".//*[@id='userNumber']");
+	private SelenideElement currentAddressInput = $x(".//*[@id='currentAddress']");
+
 
 	public Meta setFirstNameInput(String value) {
 		firstNameInput.setValue(value);
@@ -21,4 +26,18 @@ public class Meta extends SelenideTestsPageObjectTestBase {
 		return this;
 	}
 
+	public Meta setUserEmailInput(String value) {
+		userEmailInput.setValue(value);
+		return this;
+	}
+
+	public Meta setPhoneNumber1Input(String value) {
+		phoneNumber1Input.setValue(value);
+		return this;
+	}
+
+	public Meta setCurrentAddressInput(String value) {
+		currentAddressInput.setValue(value);
+		return this;
+	}
 }
