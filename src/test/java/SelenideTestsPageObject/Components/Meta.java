@@ -40,4 +40,9 @@ public class Meta extends SelenideTestsPageObjectTestBase {
 		currentAddressInput.setValue(value);
 		return this;
 	}
+
+	public Meta getCheckResult(String key, String value) {
+		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']");
+		return this;
+	}
 }

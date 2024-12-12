@@ -379,8 +379,21 @@ public class SelenideTestsPageObjectTests extends Meta {
 
 		$x(".//*[@id='example-modal-sizes-title-lg']").shouldHave(text("Thanks for submitting the form"));
 
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
-				.shouldHave(text(name1 + " " + surname1), text(email1), text(String.valueOf(phoneNumber1)), text(adress1));  // код в Одну строку, но здесь проверяется просто наличие всех записей, но не соответствие Данных Одной колонки данным Другой соответствующей ей колонки
+		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']").shouldHave(text(name1 + " " + surname1), text(email1), text(String.valueOf(phoneNumber1)), text(adress1));
+		meta.getCheckResult("Student Name", "Mark Petrov")
+				.getCheckResult("Student Email", "MarkPetrov@mail.com")
+				.getCheckResult("Gender", "Male")
+				.getCheckResult("Mobile", "1234567891")
+				.getCheckResult("Date of Birth", "01 January,1900")
+				.getCheckResult("Subjects", "English")
+				.getCheckResult("Hobbies", "Sports")
+				.getCheckResult("Address", "Russia, Moscow 1")
+				.getCheckResult("State and City", "Rajasthan Jaiselmer");
+
+
+		// БЫЛО до PageObject !!
+//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
+//				.shouldHave(text(name1 + " " + surname1), text(email1), text(String.valueOf(phoneNumber1)), text(adress1));  // код в Одну строку, но здесь проверяется просто наличие всех записей, но не соответствие Данных Одной колонки данным Другой соответствующей ей колонки
 
 
 //				.$(byTagAndText("td", "Student Name"))  // а таким кодом как раз проверяется соответствие Данных Одной колонки данным Другой соответствующей ей колонки
@@ -394,46 +407,46 @@ public class SelenideTestsPageObjectTests extends Meta {
 //				.sibling(0)
 //				.shouldHave(text(email1));
 
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
-				.$(byTagAndText("td", "Gender"))
-				.sibling(0)
-				.shouldHave(text("Male"));
+//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
+//				.$(byTagAndText("td", "Gender"))
+//				.sibling(0)
+//				.shouldHave(text("Male"));
 
 //		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 //				.$(byTagAndText("td", "Mobile"))
 //				.sibling(0)
 //				.shouldHave(text(String.valueOf(phoneNumber1)));
 
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
-				.$(byTagAndText("td", "Date of Birth"))
-				.sibling(0)
-				.shouldHave(
-						text("01 January,1900"));
+//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
+//				.$(byTagAndText("td", "Date of Birth"))
+//				.sibling(0)
+//				.shouldHave(
+//						text("01 January,1900"));
+//
+//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
+//				.$(byTagAndText("td", "Subjects"))
+//				.sibling(0)
+//				.shouldHave(text("English"));
+//
+//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
+//				.$(byTagAndText("td", "Hobbies"))
+//				.sibling(0)
+//				.shouldHave(text("Sports"));
 
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
-				.$(byTagAndText("td", "Subjects"))
-				.sibling(0)
-				.shouldHave(text("English"));
-
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
-				.$(byTagAndText("td", "Hobbies"))
-				.sibling(0)
-				.shouldHave(text("Sports"));
-
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
-				.$(byTagAndText("td", "Picture"))
-				.sibling(0)
-				.shouldHave(text("sampleFile1.jpeg"));
+//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
+//				.$(byTagAndText("td", "Picture"))
+//				.sibling(0)
+//				.shouldHave(text("sampleFile1.jpeg"));
 
 //		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 //				.$(byTagAndText("td", "Address"))
 //				.sibling(0)
 //				.shouldHave(text(adress1));
 
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
-				.$(byTagAndText("td", "State and City"))
-				.sibling(0)
-				.shouldHave(text("Rajasthan Jaiselmer"));
+//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
+//				.$(byTagAndText("td", "State and City"))
+//				.sibling(0)
+//				.shouldHave(text("Rajasthan Jaiselmer"));
 
 //sleep(99999999);
 		//	УСПЕШНО !!! (получен ожидаемый результат)
