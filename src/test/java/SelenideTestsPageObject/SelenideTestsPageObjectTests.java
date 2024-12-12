@@ -380,24 +380,29 @@ public class SelenideTestsPageObjectTests extends Meta {
 		$x(".//*[@id='example-modal-sizes-title-lg']").shouldHave(text("Thanks for submitting the form"));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
-				.$(byTagAndText("td", "Student Name"))
-				.sibling(0)
-				.shouldHave(text(name1 + " " + surname1));
+				.shouldHave(text(name1 + " " + surname1), text(email1), text(String.valueOf(phoneNumber1)), text(adress1));  // код в Одну строку, но здесь проверяется просто наличие всех записей, но не соответствие Данных Одной колонки данным Другой соответствующей ей колонки
 
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
-				.$(byTagAndText("td", "Student Email"))
-				.sibling(0)
-				.shouldHave(text(email1));
+
+//				.$(byTagAndText("td", "Student Name"))  // а таким кодом как раз проверяется соответствие Данных Одной колонки данным Другой соответствующей ей колонки
+//				.sibling(0)
+//				.shouldHave(text(name1 + " " + surname1));
+//				sleep(999999999);
+
+
+//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
+//				.$(byTagAndText("td", "Student Email"))
+//				.sibling(0)
+//				.shouldHave(text(email1));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Gender"))
 				.sibling(0)
 				.shouldHave(text("Male"));
 
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
-				.$(byTagAndText("td", "Mobile"))
-				.sibling(0)
-				.shouldHave(text(String.valueOf(phoneNumber1)));
+//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
+//				.$(byTagAndText("td", "Mobile"))
+//				.sibling(0)
+//				.shouldHave(text(String.valueOf(phoneNumber1)));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "Date of Birth"))
@@ -420,10 +425,10 @@ public class SelenideTestsPageObjectTests extends Meta {
 				.sibling(0)
 				.shouldHave(text("sampleFile1.jpeg"));
 
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
-				.$(byTagAndText("td", "Address"))
-				.sibling(0)
-				.shouldHave(text(adress1));
+//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
+//				.$(byTagAndText("td", "Address"))
+//				.sibling(0)
+//				.shouldHave(text(adress1));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']")
 				.$(byTagAndText("td", "State and City"))

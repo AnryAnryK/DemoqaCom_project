@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$x;
 public class Meta extends SelenideTestsPageObjectTestBase {
 
 
-	public static final String website = "https://demoqa.com/";
+
 	private SelenideElement firstNameInput = $x(".//*[@id='firstName']");
 	private SelenideElement lastNameInput = $x(".//*[@id='lastName']");
 	private SelenideElement userEmailInput = $x(".//*[@id='userEmail']");
