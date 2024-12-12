@@ -31,8 +31,8 @@ public class Meta extends SelenideTestsPageObjectTestBase {
 		return this;
 	}
 
-	public Meta setPhoneNumber1Input(String value) {
-		phoneNumber1Input.setValue(value);
+	public Meta setPhoneNumber1Input(int value) {
+		phoneNumber1Input.setValue(String.valueOf(value));
 		return this;
 	}
 

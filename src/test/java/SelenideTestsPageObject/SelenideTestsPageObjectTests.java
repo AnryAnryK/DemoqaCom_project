@@ -354,20 +354,17 @@ public class SelenideTestsPageObjectTests extends Meta {
 
 		// 2 Шаг: Заполнить форму // это - с PageObject с данными в пакете "Meta"
 
-		meta.setFirstNameInput("Mark")
-				.setLastNameInput("Petrov")
-				.setUserEmailInput("MarkPetrov@mail.com")
-				.setPhoneNumber1Input("1234567891")
-				.setCurrentAddressInput("Russia, Moscow 1");
+		meta.setFirstNameInput(name1)
+				.setLastNameInput(surname1)
+				.setUserEmailInput(email1)
+				.setPhoneNumber1Input(phoneNumber1)
+				.setCurrentAddressInput(adress1);
 
 		$x(".//*[@class='practice-form-wrapper']").$(byText("Male")).click();
-
 		$x(".//*[@id='dateOfBirthInput']").click();
-
 		$x(".//*[@class='react-datepicker__month-select']").$(byText("January")).click();
 		$x(".//*[@class='react-datepicker__year-select']").$(byText("1900")).click();
 		$x(".//*[@class='react-datepicker__day react-datepicker__day--001']").click();
-
 		$x(".//*[@id='subjectsInput']").setValue("English").pressEnter();
 		$x(".//*[@id='hobbiesWrapper']").$(byText("Sports")).click();
 		$x(".//*[@id='uploadPicture']").uploadFromClasspath("sampleFile1.jpeg");
