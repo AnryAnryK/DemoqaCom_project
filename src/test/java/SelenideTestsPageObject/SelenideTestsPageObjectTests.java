@@ -380,7 +380,7 @@ public class SelenideTestsPageObjectTests extends Meta {
 		$x(".//*[@id='example-modal-sizes-title-lg']").shouldHave(text("Thanks for submitting the form"));
 
 		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']").shouldHave(text(name1 + " " + surname1), text(email1), text(String.valueOf(phoneNumber1)), text(adress1));
-		meta.getCheckResult("Student Name", "Mark Petrov")
+				meta.getCheckResult("Student Name", "Mark Petrov")
 				.getCheckResult("Student Email", "MarkPetrov@mail.com")
 				.getCheckResult("Gender", "Male")
 				.getCheckResult("Mobile", "1234567891")

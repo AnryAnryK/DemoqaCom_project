@@ -3,6 +3,8 @@ package SelenideTestsPageObject.Components;
 import SelenideTestsPageObject.SelenideTestsPageObjectTestBase;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class Meta extends SelenideTestsPageObjectTestBase {
@@ -42,7 +44,8 @@ public class Meta extends SelenideTestsPageObjectTestBase {
 	}
 
 	public Meta getCheckResult(String key, String value) {
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']");
+		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']").$(byText(key)).parent()
+				.shouldHave(text(value));
 		return this;
 	}
 }
