@@ -6,10 +6,9 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
-import static io.qameta.allure.Allure.step;
+import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.open;
 
 public class SelenideTestsPageObjectTests extends Meta {
 
@@ -354,8 +353,13 @@ public class SelenideTestsPageObjectTests extends Meta {
 
 		// 2 Шаг: Заполнить форму // это - с PageObject с данными в пакете "Meta"
 
-		meta.setFirstNameInput(name1)
-				.setLastNameInput(surname1)
+		meta.setFirstNameInput(name1);
+		String name2 = "Mark2", // можно и так
+				surname2 = "Petrov2", // можно и так
+				email2 = "Mark2Petrov@mail.com"; // можно и так
+
+
+		meta.setLastNameInput(surname1)
 				.setUserEmailInput(email1)
 				.setPhoneNumber1Input(phoneNumber1)
 				.setCurrentAddressInput(adress1);
@@ -379,8 +383,8 @@ public class SelenideTestsPageObjectTests extends Meta {
 
 		$x(".//*[@id='example-modal-sizes-title-lg']").shouldHave(text("Thanks for submitting the form"));
 
-		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']").shouldHave(text(name1 + " " + surname1), text(email1), text(String.valueOf(phoneNumber1)), text(adress1));
-				meta.getCheckResult("Student Name", "Mark Petrov")
+//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']").shouldHave(text(name1 + " " + surname1), text(email1), text(String.valueOf(phoneNumber1)), text(adress1));
+		meta.getCheckResult("Student Name", "Mark Petrov")
 				.getCheckResult("Student Email", "MarkPetrov@mail.com")
 				.getCheckResult("Gender", "Male")
 				.getCheckResult("Mobile", "1234567891")
