@@ -5,6 +5,8 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.Test;
 
+import static SelenideTestsPageObject.Components.RandomDataBase.getRandomEmail;
+import static SelenideTestsPageObject.Components.RandomDataBase.getRandomString;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$x;
@@ -21,20 +23,23 @@ public class SelenideTestsPageObjectRandomDataTests extends Meta {
 
 	//	УСПЕШНО !!! (получен ожидаемый результат)
 
+
 	public void SelenideTestsLombokTestsWithNoDetailReportSuccesfullTest() {
+
+
 		// 1 Шаг: зайти на сайт https://demoqa.com/automation-practice-form
 		open(website + "automation-practice-form");
 
 		// 2 Шаг: Заполнить форму // это - с PageObject с данными в пакете "Meta"
 
-		meta.setFirstNameInput(name1);
-		String name2 = randomString(), // можно и так
-				surname2 = "Petrov2", // можно и так
-				email2 = "Mark2Petrov@mail.com"; // можно и так
 
+		String name2 = getRandomString(10), // можно и так
+				surname2 = getRandomString(10), // можно и так
+				email2 = getRandomEmail(); // можно и так
 
-		meta.setLastNameInput(surname1)
-				.setUserEmailInput(email1)
+		meta.setFirstNameInput(name2)
+				.setLastNameInput(surname2)
+				.setUserEmailInput(email2)
 				.setPhoneNumber1Input(phoneNumber1)
 				.setCurrentAddressInput(adress1);
 
