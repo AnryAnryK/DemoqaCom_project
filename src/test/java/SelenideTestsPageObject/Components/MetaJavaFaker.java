@@ -2,10 +2,22 @@ package SelenideTestsPageObject.Components;
 
 import SelenideTestsPageObject.SelenideTestsPageObjectTestBase;
 import com.codeborne.selenide.SelenideElement;
+import com.github.javafaker.Faker;
 
+import java.util.Locale;
+
+import static SelenideTestsPageObject.Components.RandomDataBase.getRandomphoneNumber;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class MetaJavaFaker extends SelenideTestsPageObjectTestBase {
+
+	Faker faker = new Faker(new Locale("pl"));  // new Locale - дает возможность получать данные на ЛЮБОМ языке мира (здесь пример "pl" - польского языка)
+
+	public String firstName = faker.name().firstName(); // Emory
+	public String lastName = faker.name().lastName(); // Barton
+	public String email = faker.internet().emailAddress(); //
+	public long phoneNumber = getRandomphoneNumber(0000000001L, 9999999999L); // можно и так
+	public String streetAddress = faker.address().streetAddress(); // 60018 Sawayn Brooks Suite 449
 
 
 	private SelenideElement firstNameInput = $x(".//*[@id='firstName']");

@@ -9,11 +9,9 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
 
-import static SelenideTestsPageObject.Components.RandomDataBase.getRandomphoneNumber;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 
 public class SelenideTestsPageObjectJavaFakerTests extends MetaJavaFaker {
@@ -36,15 +34,17 @@ public class SelenideTestsPageObjectJavaFakerTests extends MetaJavaFaker {
 
 		// 2 Шаг: Заполнить форму // это - с PageObject с данными в пакете "MetaJavaFaker"
 
-		Faker faker = new Faker(new Locale("pl"));
+		Faker faker = new Faker(new Locale("pl"));  // new Locale - дает возможность получать данные на ЛЮБОМ языке мира (здесь пример "pl" - польского языка)
 
-		String firstName = faker.name().firstName(); // Emory
-		String lastName = faker.name().lastName(); // Barton
-		String email = faker.internet().emailAddress(); //
-		long phoneNumber = getRandomphoneNumber(0000000001L, 9999999999L); // можно и так
-		String streetAddress = faker.address().streetAddress(); // 60018 Sawayn Brooks Suite 449
+		MetaJavaFaker metaJavaFaker = new MetaJavaFaker();
 
+////		String firstName = faker.name().firstName(); // Emory
+//		String lastName = faker.name().lastName(); // Barton
+//		String email = faker.internet().emailAddress(); //
+//		long phoneNumber = getRandomphoneNumber(0000000001L, 9999999999L); // можно и так
+//		String streetAddress = faker.address().streetAddress(); // 60018 Sawayn Brooks Suite 449
 
+		$x(".//*[@id='firstName']").setValue(metaJavaFaker.firstName); // или $x(".//*[@id='firstName']").setValue(new metaJavaFaker().firstName)
 
 		meta.setFirstNameInput(firstName)
 				.setLastNameInput(lastName)
@@ -53,7 +53,7 @@ public class SelenideTestsPageObjectJavaFakerTests extends MetaJavaFaker {
 				.setCurrentAddressInput(streetAddress);
 
 
-//sleep(999999999);
+sleep(999999999);
 
 		$x(".//*[@class='practice-form-wrapper']").$(byText("Male")).click();
 		$x(".//*[@id='dateOfBirthInput']").click();
