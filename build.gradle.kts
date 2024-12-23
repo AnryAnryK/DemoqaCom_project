@@ -37,6 +37,7 @@ dependencies {
     testImplementation("io.qameta.allure:allure-selenide:2.19.0") //для Аллюр- отчётов
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0") //для Аллюр- отчётов
     testImplementation("io.rest-assured:rest-assured:5.5.0") //для тестирования Rest Api
+    testImplementation("com.github.javafaker:javafaker:1.0.2")  //javaFaker
     }
 
 tasks.test {

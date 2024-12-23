@@ -1,16 +1,22 @@
 package SelenideTestsPageObject;
 
 import SelenideTestsPageObject.Components.Meta;
+import SelenideTestsPageObject.Components.MetaJavaFaker;
+import com.github.javafaker.Faker;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.Test;
 
-import static SelenideTestsPageObject.Components.RandomDataBase.*;
+import java.util.Locale;
+
+import static SelenideTestsPageObject.Components.RandomDataBase.getRandomphoneNumber;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.open;
 
-public class SelenideTestsPageObjectRandomDataTests extends Meta {
+
+public class SelenideTestsPageObjectJavaFakerTests extends MetaJavaFaker {
 
 	Meta meta = new Meta();  // это - с PageObject с данными в пакете "Meta"
 
@@ -28,24 +34,26 @@ public class SelenideTestsPageObjectRandomDataTests extends Meta {
 		// 1 Шаг: зайти на сайт https://demoqa.com/automation-practice-form
 		open(website + "automation-practice-form");
 
-		// 2 Шаг: Заполнить форму // это - с PageObject с данными в пакете "Meta"
+		// 2 Шаг: Заполнить форму // это - с PageObject с данными в пакете "MetaJavaFaker"
+
+		Faker faker = new Faker(new Locale("pl"));
+
+		String firstName = faker.name().firstName(); // Emory
+		String lastName = faker.name().lastName(); // Barton
+		String email = faker.internet().emailAddress(); //
+		long phoneNumber = getRandomphoneNumber(0000000001L, 9999999999L); // можно и так
+		String streetAddress = faker.address().streetAddress(); // 60018 Sawayn Brooks Suite 449
 
 
-		String name2 = getRandomString(10), // можно и так
-				surname2 = getRandomString(10), // можно и так
-				email2 = getRandomEmail(); // можно и так
-				long phoneNumber2 = getRandomphoneNumber(0000000001L, 9999999999L); // можно и так
-				String adress2 = (getRandomString(10) + getRandomString(10)); // можно и так
-				String subject2 = getRandomsubject2(); // можно и так
+
+		meta.setFirstNameInput(firstName)
+				.setLastNameInput(lastName)
+				.setUserEmailInput(email)
+				.setPhoneNumber2Input(phoneNumber)
+				.setCurrentAddressInput(streetAddress);
 
 
-		meta.setFirstNameInput(name2)
-				.setLastNameInput(surname2)
-				.setUserEmailInput(email2)
-				.setPhoneNumber2Input(phoneNumber2)
-				.setCurrentAddressInput(adress2)
-				.setSubjectInput(subject2);
-
+//sleep(999999999);
 
 		$x(".//*[@class='practice-form-wrapper']").$(byText("Male")).click();
 		$x(".//*[@id='dateOfBirthInput']").click();
@@ -53,7 +61,7 @@ public class SelenideTestsPageObjectRandomDataTests extends Meta {
 		$x(".//*[@class='react-datepicker__year-select']").$(byText("1900")).click();
 		$x(".//*[@class='react-datepicker__day react-datepicker__day--001']").click();
 		//
-		// $x(".//*[@id='subjectsInput']").setValue("English").pressEnter();
+		 $x(".//*[@id='subjectsInput']").setValue("English").pressEnter();
 		$x(".//*[@id='hobbiesWrapper']").$(byText("Sports")).click();
 		$x(".//*[@id='uploadPicture']").uploadFromClasspath("sampleFile1.jpeg");
 		$x(".//*[@class=' css-1wa3eu0-placeholder']").scrollTo().click();
@@ -67,17 +75,7 @@ public class SelenideTestsPageObjectRandomDataTests extends Meta {
 
 		$x(".//*[@id='example-modal-sizes-title-lg']").shouldHave(text("Thanks for submitting the form"));
 
-//		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']").shouldHave(text(name1 + " " + surname1), text(email1), text(String.valueOf(phoneNumber1)), text(adress1));
-		meta.getCheckResult("Student Name", "Mark Petrov")
-				.getCheckResult("Student Email", "MarkPetrov@mail.com")
-				.getCheckResult("Gender", "Male")
-				.getCheckResult("Mobile", "1234567891")
-				.getCheckResult("Date of Birth", "01 January,1900")
-				.getCheckResult("Subjects", "English")
-				.getCheckResult("Hobbies", "Sports")
-				.getCheckResult("Address", "Russia, Moscow 1")
-				.getCheckResult("State and City", "Rajasthan Jaiselmer");
-
+		$x(".//*[@class='table table-dark table-striped table-bordered table-hover']").shouldHave(text(firstName + " " + lastName), text(email), text(String.valueOf(phoneNumber)), text(streetAddress));
 
 	}
 }
