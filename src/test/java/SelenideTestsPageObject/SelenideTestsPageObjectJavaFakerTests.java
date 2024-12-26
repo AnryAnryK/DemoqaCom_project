@@ -34,11 +34,12 @@ public class SelenideTestsPageObjectJavaFakerTests extends MetaJavaFaker {
 
 		// 2 Шаг: Заполнить форму // это - с PageObject с данными в пакете "MetaJavaFaker"
 
-		Faker faker = new Faker(new Locale("pl"));  // new Locale - дает возможность получать данные на ЛЮБОМ языке мира (здесь пример "pl" - польского языка)
+		Faker faker = new Faker(new Locale("pl"));  // new Locale - дает возможность получать данные на ЛЮБОМ языке мира (здесь пример "pl" - польского языка) - на ГитХаб можно посмотреть здесь: https://github.com/DiUS/java-faker?tab=readme-ov-file
 
 		MetaJavaFaker metaJavaFaker = new MetaJavaFaker();
 
-////		String firstName = faker.name().firstName(); // Emory
+// вариант JavaFaker:
+//		String firstName = faker.name().firstName(); // Emory
 //		String lastName = faker.name().lastName(); // Barton
 //		String email = faker.internet().emailAddress(); //
 //		long phoneNumber = getRandomphoneNumber(0000000001L, 9999999999L); // можно и так
@@ -46,14 +47,14 @@ public class SelenideTestsPageObjectJavaFakerTests extends MetaJavaFaker {
 
 		$x(".//*[@id='firstName']").setValue(metaJavaFaker.firstName); // или $x(".//*[@id='firstName']").setValue(new metaJavaFaker().firstName)
 
-		meta.setFirstNameInput(firstName)
+		metaJavaFaker.setFirstNameInput(firstName)
 				.setLastNameInput(lastName)
 				.setUserEmailInput(email)
 				.setPhoneNumber2Input(phoneNumber)
 				.setCurrentAddressInput(streetAddress);
 
 
-sleep(999999999);
+//sleep(999999999);
 
 		$x(".//*[@class='practice-form-wrapper']").$(byText("Male")).click();
 		$x(".//*[@id='dateOfBirthInput']").click();
