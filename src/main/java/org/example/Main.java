@@ -16,6 +16,7 @@ public class Main {
 		double c = a+b;
 		System.out.println(c);
 
+		
 // код округляет до 1/10 результат: 1.2 + 2.5 =  3.7
 		BigDecimal sum = new BigDecimal("1.2").add(new BigDecimal("2.5"));
 		System.out.println(sum);
