@@ -1,4 +1,4 @@
-package SelenideTests.DemoQaPageObject.Checkbox;
+package SelenideTestsPageObject.DemoQaPageObject.Checkbox;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
