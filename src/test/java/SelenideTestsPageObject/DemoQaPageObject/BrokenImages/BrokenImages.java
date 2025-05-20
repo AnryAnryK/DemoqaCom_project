@@ -6,7 +6,9 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.image;
+import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 
@@ -28,12 +30,15 @@ public class BrokenImages {
 			open(websiteWebTables);
 		});
 
-		step("2 Шаг: проверить загруженную 'битую картинку'", () -> {
-			$x(".//*[@src='/images/Toolsqa_1.jpg']").isImage();
-		});  // пишет "всё ок, тест - ок, Image - норм".  А как он - "норм", если Image явно "битый" ??
+		step("2 Шаг: проверить загруженную 'нормальную картинку'", () ->
+			($x(".//*[@src='/images/Toolsqa.jpg']")).shouldBe(image));  // сработало успешно (тест - зелёный, т.к. картинку он распознал как "не битую") !!
 
-//		step("2 Шаг: проверить загруженную 'нормальную картинку'", () ->
-//				$x(".//*[@src='/images/Toolsqa.jpg']").isImage());
+		step("3 Шаг: проверить загруженную 'битую картинку'", () -> {
+			($x(".//*[@src='/images/Toolsqa_1.jpg']")).shouldBe(image); // сработало успешно (тест - зелёный, т.к. картинку он распознал как "битую") !!
+		});
+
+
+
 
 
 	}
