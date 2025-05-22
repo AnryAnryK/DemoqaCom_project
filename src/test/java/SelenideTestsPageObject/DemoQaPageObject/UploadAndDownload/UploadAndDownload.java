@@ -57,7 +57,8 @@ public class UploadAndDownload {
 
 // это - не работает !!
 //		File downloadedFile = $(byAttribute("download", "sampleFile.jpeg")).download();
-		File downloadedFile = $(By.xpath(".//*[@download='sampleFile.jpeg']")).download();
+		File download = $(By.xpath(".//*[@download='sampleFile.jpeg']")).download();
+//		Assert.isTrue(FileUtils.contentEquals(download, file));
 //		System.out.println(downloadedFile);
 	}
 
