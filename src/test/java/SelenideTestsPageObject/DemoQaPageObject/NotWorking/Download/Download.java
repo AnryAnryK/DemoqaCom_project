@@ -1,4 +1,4 @@
-package SelenideTestsPageObject.DemoQaPageObject.NotWorking;
+package SelenideTestsPageObject.DemoQaPageObject.NotWorking.Download;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;

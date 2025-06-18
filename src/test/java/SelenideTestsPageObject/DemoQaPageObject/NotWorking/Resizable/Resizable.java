@@ -1,4 +1,4 @@
-package SelenideTestsPageObject.DemoQaPageObject.Interactions.Resizable;
+package SelenideTestsPageObject.DemoQaPageObject.NotWorking.Resizable;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -37,8 +37,8 @@ public class Resizable {
 
 		Object resizable =
 				$x(".//*[@class='box react-resizable']");
-		executeJavaScript("(argument[0].setAttribute('width','333px')", resizable);
-		executeJavaScript("(argument[1].setAttribute('height','244px')", resizable);
+		executeJavaScript("argument[0].setAttribute('width','333px')", resizable);
+		executeJavaScript("argument[0].setAttribute('height','244px')", resizable);
 
 			}
 }
