@@ -41,15 +41,18 @@ public class Slider {
 			executeJavaScript("arguments[0].setAttribute('style','--value: 32;')", slider1);
 
 			executeJavaScript("arguments[0].setAttribute('style','left: calc(32% + 3.6px);')", slider2);
+			$x("(.//*[@id='sliderValue'])").clear();
 			$x("(.//*[@id='sliderValue'])").setValue("32");
 		});
 
 		step("3 Шаг: проверить, что установлена нужная цифра (например: 32) ", () ->
 		{
-			$x("(.//*[@class='range-slider range-slider--primary'])").shouldHave(value("32")); // значение остаётся на 25, тест падает !!!
+			$x("(.//*[@id='sliderValue'])").shouldHave(value("32")); // значение остаётся на 25, тест падает !!!
 		});
 	}
+
 }
+
 
 
 

@@ -7,9 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static io.qameta.allure.Allure.step;
-
 
 public class Resizable {
 
@@ -40,7 +38,8 @@ public class Resizable {
 		executeJavaScript("argument[0].setAttribute('width','333px')", resizable);
 		executeJavaScript("argument[0].setAttribute('height','244px')", resizable);
 
-			}
+	}
 }
+
 
 
