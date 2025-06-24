@@ -44,5 +44,6 @@ public class Student {
 		 System.out.println("student1 middleMark = " + (student1.middleMathematicsMark + student1.middleEconomicMark +  student1.middleForeignLanguageMark)/3);
 		 System.out.println("student2 middleMark = " + (student2.middleMathematicsMark + student2.middleEconomicMark +  student2.middleForeignLanguageMark)/3);
 		 System.out.println("student3 middleMark = " + (student3.middleMathematicsMark + student3.middleEconomicMark +  student3.middleForeignLanguageMark)/3);
+		 
 	 }
 }
