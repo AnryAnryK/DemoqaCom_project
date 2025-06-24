@@ -1,15 +1,14 @@
 package JavaCore.Lesson5Constructor;
 
 public class BankAccount {
-	double balance = 1.0;
-	double balancePlus = balance + 2.1;
+	double balance = 1.1;
+	double balancePlus = balance + 0.1;
 
 
 	public static void main(String[] args) {
 		BankAccount bankAccount = new BankAccount();
 		bankAccount.popolnenieShveta(bankAccount.balance, bankAccount.balancePlus);
 	}
-
 
 	double popolnenieShveta(double balance, double balancePlus) {
 
