@@ -3,82 +3,69 @@ package JavaCore.Lesson4.employee;
 public class Employee {
 	String name;
 	int position;
-	static int employeeCount=0;
+	static int employeeCount;
 
 	Employee() {
 		this.name = name;
 		this.position = position;
-		this.employeeCount = employeeCount;
+		employeeCount=getEmployeeCount()+1;
 	}
-	 int EmployeeCount() {
-		employeeCount++;
 
-		 return employeeCount++;
-	 }
 
-	public void getName() {
-		Employee employeeGetName = new Employee();
-		employeeGetName.name = name;
-		name = "Петр";
+	public String getName() {
+		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
-		name = "Слава";
+
 	}
 
-	public void getPosition() {
-		Employee employeeGetPosition = new Employee();
-		employeeGetPosition.position = position;
-		position = 1;
-
+	public int getPosition() {
+		return position;
 	}
 
 	public void setPosition(int position) {
+
 		this.position = position;
 	}
 
-	public static void  getEmployeeCount() {
-		System.out.println(employeeCount);
+	public static int getEmployeeCount() {
+		return employeeCount;
 	}
 
 	public static void setEmployeeCount(int employeeCount) {
-		Employee.employeeCount = employeeCount;
 
 	}
-
-
 }
 
 class EmployeeTest {
 	public static void main(String[] args) {
+
 		Employee employee1 = new Employee();
-		employee1.getName();
-		System.out.println("Имя: " + employee1.name);
-//		employee1.setName("Слава");
-//		System.out.println("Имя: " + employee1.name);
-		employee1.getPosition();
-		System.out.println("Номер позиции: " + employee1.position);
-		System.out.println(employee1.EmployeeCount());
-		employee1.getEmployeeCount();
+		employee1.setName("Иван");
+		System.out.println("Имя сотрудника: " + employee1.getName());
+		employee1.setPosition(1);
+		System.out.println("Номер позиции сотрудника: " + employee1.getPosition());
 
 
-
-		System.out.println("=================");
-
+		System.out.println("===============");
 		Employee employee2 = new Employee();
-		employee2.getName();
-		System.out.println("Имя: " + employee2.name);
-		employee2.getPosition();
-		System.out.println("Номер позиции: " + employee2.position);
-		System.out.println(employee2.EmployeeCount());
-		employee2.getEmployeeCount();
+		employee2.setName("Петр");
+		System.out.println("Имя сотрудника: " + employee2.getName());
+		employee2.setPosition(2);
+		System.out.println("Номер позиции сотрудника: " + employee2.getPosition());
 
-		System.out.println("=================");
+		System.out.println("===============");
+		Employee employee3 = new Employee();
+		employee3.setName("Боб");
+		System.out.println("Имя сотрудника: " + employee3.getName());
+		employee3.setPosition(3);
+		System.out.println("Номер позиции сотрудника: " + employee3.getPosition());
 
-		System.out.println("Общее количество сотрудников");
-		System.out.println(employee1.EmployeeCount() + employee2.EmployeeCount());
-//		System.out.println(employee1.getEmployeeCount(), employee2.getEmployeeCount());
+
+		System.out.println("===============");
+		System.out.println("Общее количество сотрудников: " + Employee.getEmployeeCount());
 
 	}
 }

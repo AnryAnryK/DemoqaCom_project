@@ -9,6 +9,13 @@ public class Student {
 	double middleEconomicMark;
 	double middleForeignLanguageMark;
 
+	Student middleMathematicsMarkTest (double middleMathematicsMark, double middleEconomicMark, double middleForeignLanguageMark){
+		this.middleMathematicsMark=middleMathematicsMark/3;
+		this.middleEconomicMark=middleEconomicMark/3;
+		this.middleForeignLanguageMark=middleForeignLanguageMark/3;
+
+		return null;
+	}
 }
 
  class StudentTest {
@@ -23,6 +30,11 @@ public class Student {
 		 student1.middleEconomicMark =  4.5;
 		 student1.middleForeignLanguageMark =  4.5;
 
+		 System.out.println("========");
+		 System.out.println(student1.middleMathematicsMarkTest(4.5, 4.5, 4.5));
+		 System.out.println("========");
+
+
 		 Student student2 = new Student();
 		 student2.studentBookNumber = 2;
 		 student2.name = "Petr";
@@ -31,6 +43,11 @@ public class Student {
 		 student2.middleMathematicsMark =  4.4;
 		 student2.middleEconomicMark =  4.4;
 		 student2.middleForeignLanguageMark =  4.4;
+
+
+		 System.out.println("========");
+		 System.out.println(student2.middleMathematicsMarkTest(4.4, 4.4, 4.4));
+		 System.out.println("========");
 
 		 Student student3 = new Student();
 		 student3.studentBookNumber = 3;
@@ -41,9 +58,13 @@ public class Student {
 		 student3.middleEconomicMark =  4.0;
 		 student3.middleForeignLanguageMark =  4.0;
 
-		 System.out.println("student1 middleMark = " + (student1.middleMathematicsMark + student1.middleEconomicMark +  student1.middleForeignLanguageMark)/3);
-		 System.out.println("student2 middleMark = " + (student2.middleMathematicsMark + student2.middleEconomicMark +  student2.middleForeignLanguageMark)/3);
-		 System.out.println("student3 middleMark = " + (student3.middleMathematicsMark + student3.middleEconomicMark +  student3.middleForeignLanguageMark)/3);
-		 
+		 System.out.println("========");
+		 System.out.println(student3.middleMathematicsMarkTest(4.0, 4.0, 4.0));
+		 System.out.println("========");
+
+//		 System.out.println("student1 middleMark = " + (student1.middleMathematicsMark + student1.middleEconomicMark +  student1.middleForeignLanguageMark)/3);
+//		 System.out.println("student2 middleMark = " + (student2.middleMathematicsMark + student2.middleEconomicMark +  student2.middleForeignLanguageMark)/3);
+//		 System.out.println("student3 middleMark = " + (student3.middleMathematicsMark + student3.middleEconomicMark +  student3.middleForeignLanguageMark)/3);
+//
 	 }
 }
