@@ -9,14 +9,18 @@ public class Student {
 	double middleEconomicMark;
 	double middleForeignLanguageMark;
 
-	Student middleMathematicsMarkTest (double middleMathematicsMark, double middleEconomicMark, double middleForeignLanguageMark){
-		this.middleMathematicsMark=middleMathematicsMark/3;
-		this.middleEconomicMark=middleEconomicMark/3;
-		this.middleForeignLanguageMark=middleForeignLanguageMark/3;
 
-		return null;
-	}
 }
+
+//class StudentTest2{
+//
+//	double middleMathematicsMarkTest (String student1) {
+//		double srednOcenka = (student1.middleMathematicsMark + middleEconomicMark + middleForeignLanguageMark ) / 3;
+//		return srednOcenka;
+//
+//	}
+//}
+
 
  class StudentTest {
 	 public static void main(String[] args) {
@@ -31,7 +35,7 @@ public class Student {
 		 student1.middleForeignLanguageMark =  4.5;
 
 		 System.out.println("========");
-		 System.out.println(student1.middleMathematicsMarkTest(4.5, 4.5, 4.5));
+//		 System.out.println(student1.middleMathematicsMarkTest(4.5, 4.5, 4.5));
 		 System.out.println("========");
 
 
@@ -46,7 +50,7 @@ public class Student {
 
 
 		 System.out.println("========");
-		 System.out.println(student2.middleMathematicsMarkTest(4.4, 4.4, 4.4));
+//		 System.out.println(student2.middleMathematicsMarkTest(4.4, 4.4, 4.4));
 		 System.out.println("========");
 
 		 Student student3 = new Student();
@@ -59,7 +63,7 @@ public class Student {
 		 student3.middleForeignLanguageMark =  4.0;
 
 		 System.out.println("========");
-		 System.out.println(student3.middleMathematicsMarkTest(4.0, 4.0, 4.0));
+//		 System.out.println(student3.middleMathematicsMarkTest(4.0, 4.0, 4.0));
 		 System.out.println("========");
 
 //		 System.out.println("student1 middleMark = " + (student1.middleMathematicsMark + student1.middleEconomicMark +  student1.middleForeignLanguageMark)/3);

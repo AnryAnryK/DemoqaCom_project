@@ -9,13 +9,21 @@ public class BankAccount {
 		System.out.println("Баланс счёта равен: " + bankAccount1.balance);
 
 		System.out.println("===================");
-		float balancePlus = bankAccount1.balance + bankAccount1.popolnenieScheta(3.3f);
-		System.out.println("Сумма баланса пополнилась на +" + bankAccount1.popolnenieScheta(3.3f) + " и составляет: " + balancePlus);
+		float balance = bankAccount1.balance + bankAccount1.popolnenieScheta(3.3f);
+		System.out.println("Сумма баланса пополнилась на +" + bankAccount1.popolnenieScheta(3.3f) + " и составляет: " + balance);
 
-		BankAccount bankAccount2 = new BankAccount(balancePlus);  // т.е. я считаю баланс, сначала имея переменную balance, потом, когда баланс увеличился, пришлось создать новую переменную balancePlus, а когда мне нужно уменьшить баланс, то снова - новая переменная balanceMinus   -  верно ли так делать ?
 		System.out.println("===================");
-		float balanceMinus = balancePlus + bankAccount2.snyaieSoScheta(- 2.3f);
-		System.out.println("Сумма баланса " + balancePlus + " уменьшилась на " + bankAccount2.snyaieSoScheta(- 2.3f) + " и составляет: " + balanceMinus);
+		balance=bankAccount1.snyaieSoScheta(balance- 2.3f);
+		System.out.println("Сумма баланса уменьшилась на " + bankAccount1.snyaieSoScheta(- 2.3f) + " и составляет: " + balance);
+
+//		System.out.println("===================");
+//		float balancePlus = bankAccount1.balance + bankAccount1.popolnenieScheta(3.3f);
+//		System.out.println("Сумма баланса пополнилась на +" + bankAccount1.popolnenieScheta(3.3f) + " и составляет: " + balancePlus);
+//
+//		BankAccount bankAccount2 = new BankAccount(balancePlus);  // т.е. я считаю баланс, сначала имея переменную balance, потом, когда баланс увеличился, пришлось создать новую переменную balancePlus, а когда мне нужно уменьшить баланс, то снова - новая переменная balanceMinus   -  верно ли так делать ?
+//		System.out.println("===================");
+//		float balanceMinus = balancePlus + bankAccount2.snyaieSoScheta(- 2.3f);
+//		System.out.println("Сумма баланса " + balancePlus + " уменьшилась на " + bankAccount2.snyaieSoScheta(- 2.3f) + " и составляет: " + balanceMinus);
 	}
 
 	BankAccount(float balance) {
