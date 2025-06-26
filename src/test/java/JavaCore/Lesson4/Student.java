@@ -14,7 +14,6 @@ public class Student {
 class StudentTest {
 	double middleMathematicsMarkTest(Student student) {
 		double middleMarkTest = (student.middleMathematicsMark + student.middleEconomicMark + student.middleForeignLanguageMark) / 3;
-		System.out.println(student.name + middleMarkTest);
 		return middleMarkTest;
 	}
 
@@ -67,6 +66,14 @@ class StudentTest {
 		System.out.println("Средняя оценка " + student3.name + " = " + middleMathematicsMark3);
 //		 System.out.println(student3.middleMathematicsMarkTest(4.0, 4.0, 4.0));
 		System.out.println("========");
+		System.out.println("========");
+		System.out.println("========");
+
+		System.out.println("или если через Метод middleMathematicsMarkTest: ");
+		StudentTest student = new StudentTest();
+		System.out.println("Средняя оценка " + student1.name + " = " + student.middleMathematicsMarkTest(student1));
+		System.out.println("Средняя оценка " + student2.name + " = " + student.middleMathematicsMarkTest(student2));
+		System.out.println("Средняя оценка " + student3.name + " = " + student.middleMathematicsMarkTest(student3));
 
 //		 System.out.println("student1 middleMark = " + (student1.middleMathematicsMark + student1.middleEconomicMark +  student1.middleForeignLanguageMark)/3);
 //		 System.out.println("student2 middleMark = " + (student2.middleMathematicsMark + student2.middleEconomicMark +  student2.middleForeignLanguageMark)/3);
