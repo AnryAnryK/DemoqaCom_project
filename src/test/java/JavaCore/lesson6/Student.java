@@ -12,6 +12,7 @@ public class Student {
 	String course;
 
 
+
 	Student(int a0) {
 		zero = a0;
 	}

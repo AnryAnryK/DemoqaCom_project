@@ -23,7 +23,7 @@ public class Student {
 
 
 	public void displayStudent1() {
-		Student studentDisplay1 = new Student();
+
 		System.out.println("studentDisplay1: " + "Имя по-умолчанию должно быть Неизвестно =" + name + ";" + " Возраст по-умолчанию  должен быть 18 =" + age + ";" + " Средняя оценка по-умолчанию  должна быть 0 =" + gpa);
 	}
 
