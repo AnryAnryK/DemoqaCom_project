@@ -17,6 +17,7 @@ class StudentTest {
 		return middleMarkTest;
 	}
 
+
 	public static void main(String[] args) {
 
 		Student student1 = new Student(); //1, "Ivan", "Ivanov", 2025, 4.5, 4.5, 4.5); - почему такое внесение данных в скобки new Student() не сработало ?
@@ -74,6 +75,8 @@ class StudentTest {
 		System.out.println("Средняя оценка " + student1.name + " = " + student.middleMathematicsMarkTest(student1));
 		System.out.println("Средняя оценка " + student2.name + " = " + student.middleMathematicsMarkTest(student2));
 		System.out.println("Средняя оценка " + student3.name + " = " + student.middleMathematicsMarkTest(student3));
+
+
 
 //		 System.out.println("student1 middleMark = " + (student1.middleMathematicsMark + student1.middleEconomicMark +  student1.middleForeignLanguageMark)/3);
 //		 System.out.println("student2 middleMark = " + (student2.middleMathematicsMark + student2.middleEconomicMark +  student2.middleForeignLanguageMark)/3);
