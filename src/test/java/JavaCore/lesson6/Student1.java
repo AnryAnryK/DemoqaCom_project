@@ -82,7 +82,11 @@ public class Student1 {
 
 	public static void main(String[] args) {
 		Student1 student1 = new Student1(1, 10);
-		System.out.print("Результат возврата сложения по методу summ из двух чисел: ");
+		student1.id=1;
+		student1.name="Ivan";
+		student1.surname="Ivanov";
+		student1.course="Ivanovsky";
+		System.out.print("ID студента 1: " + student1.id + ", " + "Имя студента 1: " + student1.name+ ", " + "Фамилия студента 1: " + student1.surname+ ", " + "Курс студента 1: " + student1.course+ ", " +" Результат возврата сложения по методу summ из двух чисел: ");
 		student1.summ(20, 30);
 
 	}

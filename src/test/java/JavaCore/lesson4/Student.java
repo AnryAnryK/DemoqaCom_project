@@ -1,4 +1,4 @@
-package JavaCore.Lesson4;
+package JavaCore.lesson4;
 
 public class Student {
 	int studentBookNumber;

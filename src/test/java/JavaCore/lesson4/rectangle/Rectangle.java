@@ -1,4 +1,4 @@
-package JavaCore.Lesson4.rectangle;
+package JavaCore.lesson4.rectangle;
 
 public class Rectangle {
 

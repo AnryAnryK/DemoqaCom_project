@@ -1,4 +1,4 @@
-package JavaCore.Lesson4.book;
+package JavaCore.lesson4.book;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package JavaCore.Lesson4.circle;
+package JavaCore.lesson4.circle;
 
 public class Circle {
 	int radius;

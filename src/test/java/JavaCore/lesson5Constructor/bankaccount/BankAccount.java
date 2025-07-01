@@ -1,4 +1,4 @@
-package JavaCore.Lesson5Constructor.bankaccount;
+package JavaCore.lesson5Constructor.bankaccount;
 
 public class BankAccount {
 	float balance;

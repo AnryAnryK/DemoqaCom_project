@@ -1,4 +1,4 @@
-package JavaCore.Lesson4.employee;
+package JavaCore.lesson4.employee;
 
 public class Employee {
 	String name;

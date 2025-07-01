@@ -1,4 +1,4 @@
-package JavaCore.Lesson5Constructor.employee;
+package JavaCore.lesson5Constructor.employee;
 
 public class Employee {
 	int id;
