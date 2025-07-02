@@ -11,16 +11,19 @@ public class Lesson8z2 {
 		System.out.println(square);
 	}
 
-	static void circlescore(float radius) {
+	static float circlescore(float radius) {
 		float circle = 2 * pi * radius;
 		System.out.println(circle);
+		return circle;
 	}
 
 	void radiusSquareCircleScore(float radius) {
 		float allscore = pi * radius * radius;
 		System.out.println(radius);
-		System.out.println();
+		System.out.println(circlescore(radius));
 		System.out.println("Размер радиус+площадь+окружность: " + allscore);
+		System.out.println("=================");
+		System.out.println("=================");
 		System.out.println("=================");
 	}
 

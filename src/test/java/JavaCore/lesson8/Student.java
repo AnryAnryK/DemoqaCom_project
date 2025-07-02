@@ -12,14 +12,14 @@ public class Student {
 		return score;
 	}
 
-	static void division(int a, int b, int c) {
+	static void division(int a, int b) {
 		int score = a / b;
 		System.out.println(score);
 	}
 
 	public static void main(String[] args) {
 		System.out.println("Отображает значение из статического метода multiplication (умножение трёх чисел): " + Student.multiplication(1, 2, 3));
-		System.out.print("Отображает значение из статического метода division (деление первых двух чисел): "); Student.division(1, 2, 3);
+		System.out.print("Отображает значение из статического метода division (деление первых двух чисел): "); Student.division(1, 2);
 
 	}
 }
